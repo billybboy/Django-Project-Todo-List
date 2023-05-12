@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
+    
+    <title>Django To-do Lists</title>
+    <style>
+        html {
+            font-family: monospace !important;
+        }
+        h4 {
+            margin-top: 0em !important;
+        }
+        a, a:link, a:focus, a:visited {
+            text-decoration: none !important;
+        }
+        .button.add-btn {
+            background: #1d4d7c !important;
+            color: #fff !important;
+        }
+
+        .button.del-btn {
+            background: #842a2a !important;
+            color: #fff !important;
+        }
+
+        .button.cancel-btn {
+            background: #ddd !important;
+            color: #444 !important;
+        }
+
+        .button.back-btn {
+            background: #a5aba6 !important;
+            color: #444 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="{% url 'index' %}" style="text-decoration:none;"><h1>Django To-do Lists</h1></a>
+    </div>
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+
+</html>

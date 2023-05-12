@@ -1,0 +1,23 @@
+{% extends "todo_app/base.html" %}
+
+{% block content %}
+
+<h3>{{ title }}</h3>
+<div>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input
+            value="Submit"
+            type="submit"
+            class="add-btn button"
+            >
+
+            <a href="{% url 'index' %}" class="back-btn button">Cancel</a>
+            
+        </form>
+    </div>
+</div>
+
+{% endblock %}
